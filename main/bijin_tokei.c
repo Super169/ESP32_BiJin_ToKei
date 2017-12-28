@@ -94,9 +94,9 @@ const int CONNECTED_BIT = 0x00000001;
 #define WEB_PORT 80
 static const char *REQUEST_FORMAT =
 		// "GET http://" WEB_SERVER "/assets/toppict/jp/t1/%.2d%.2d.jpg HTTP/1.0\r\n"
-		// "GET http://" WEB_SERVER "/assets/pict/jp/pc/%.2d%.2d.jpg HTTP/1.0\r\n"
+		"GET http://" WEB_SERVER "/assets/pict/jp/pc/%.2d%.2d.jpg HTTP/1.0\r\n"
 		// "GET http://" WEB_SERVER "/assets/pict/hiroshima/pc/%.2d%.2d.jpg HTTP/1.0\r\n"
-		"GET http://" WEB_SERVER "/assets/pict/kids-fo/pc/%.2d%.2d.jpg HTTP/1.0\r\n"
+		// "GET http://" WEB_SERVER "/assets/pict/kids-fo/pc/%.2d%.2d.jpg HTTP/1.0\r\n"
 		"Host: " WEB_SERVER "\r\n"
 		"User-Agent: esp-idf/1.0 esp32\r\n"
 		"\r\n";
@@ -369,8 +369,8 @@ void app_main()
 
 	// ===================================================
 	// ==== Set display type                         =====
-	tft_disp_type = DEFAULT_DISP_TYPE;
-	//tft_disp_type = DISP_TYPE_ILI9341;
+	//tft_disp_type = DEFAULT_DISP_TYPE;
+	tft_disp_type = DISP_TYPE_ILI9341;
 	//tft_disp_type = DISP_TYPE_ILI9488;
 	//tft_disp_type = DISP_TYPE_ST7735B;
 	// ===================================================
